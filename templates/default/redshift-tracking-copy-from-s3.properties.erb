@@ -9,7 +9,7 @@ secretkey=<%= @env_vars['AWS_SECRET_ACCESS_KEY'] %>
 
 [sns]
 failure_notifications=<%= @settings[:sns_failure_notifications] %>
-topic=<%= @settings[:sns_topic] || 'redshift-tracking-copy-from-s3' %>
+topic=<%= @settings[:sns_topic] %>
 
 [s3]
 buckets=<%= @s3_buckets.join(',') %>

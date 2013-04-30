@@ -26,10 +26,16 @@ This cookbook relies on a databag, which you should set in Amazon OpsWorks as yo
 {
   "service_realm": "production",
   "redshift_tracking_copy_from_s3": {
+    "redshift_host": "xxxxxx.yyyyyy.us-east-1.redshift.amazonaws.com",
+    "s3_buckets_array": ["my-bucket-1", "my-bucket-2", ...],
+    "s3_prefixes_array": ["bucket-1-events-prefix/", "bucket-2-events-prefix/", ...],
+    "redshift_tables_array": ["table1name", "table2name", ...],
     "env": {
       "AWS_ACCESS_KEY_ID": "YOUR_AWS_ACCESS_KEY_CREDENTIALS",
       "AWS_SECRET_ACCESS_KEY": "YOUR_AWS_SECRET_KEY_CREDENTIALS",
       "AWS_REGION": "us-east-1",
+      "REDSHIFT_USER": "YOUR_REDSHIFT_USER",
+      "REDSHIFT_PASSWORD": "YOUR_REDSHIFT_PW",
       ...
     }
   }
