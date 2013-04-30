@@ -29,3 +29,7 @@ default[:redshift_tracking_copy_from_s3][:redshift_blanksasnull] = true
 default[:redshift_tracking_copy_from_s3][:redshift_fillrecord] = true
 default[:redshift_tracking_copy_from_s3][:redshift_maxerror] = 1000
 default[:redshift_tracking_copy_from_s3][:redshift_delimiter] = '|'
+
+default[:redshift_tracking_copy_from_s3][:config_file] = "#{node[:redshift_tracking_copy_from_s3][:config_files_path]}/redshift_tracking_copy_from_s3.properties"
+default[:redshift_tracking_copy_from_s3][:pid_file] = "#{node[:redshift_tracking_copy_from_s3][:pid_files_path]}/redshift_tracking_copy_from_s3.pid"
+default[:redshift_tracking_copy_from_s3][:output_file] = "#{node[:redshift_tracking_copy_from_s3][:output_files_path]}/redshift_tracking_copy_from_s3.out"
