@@ -1,0 +1,31 @@
+[default]
+debug=<%= @settings[:debug] %>
+pollsleepinseconds=<%= @settings[:pollsleepinseconds] %>
+
+[aws]
+region=<%= @env_vars['AWS_REGION'] %>
+accesskey=<%= @env_vars['AWS_ACCESS_KEY_ID'] %>
+secretkey=<%= @env_vars['AWS_SECRET_ACCESS_KEY'] %>
+
+[sns]
+failure_notifications=<%= @settings[:sns_failure_notifications] %>
+topic=<%= @settings[:sns_topic] || 'redshift-tracking-copy-from-s3' %>
+
+[s3]
+buckets=<%= @s3_buckets.join(',') %>
+prefixes=<%= @s3_prefixes.join(',') %>
+
+[redshift]
+tables=<%= @redshift_tables.join(',') %>
+migrate=<%= @settings[:redshift_migrate] %>
+schema_json_url=<%= @settings[:redshift_schema_json_url] %>
+host=<%= @settings[:redshift_host] %>
+port=<%= @settings[:redshift_port] %>
+database=<%= @settings[:redshift_table] %>
+user=<%= @env_vars['REDSHIFT_USER'] %>
+password=<%= @env_vars['REDSHIFT_PASSWORD'] %>
+emptyasnull=<%= @settings[:redshift_emptyasnull] %>
+blanksasnull=<%= @settings[:redshift_blanksasnull] %>
+fillrecord=<%= @settings[:redshift_fillrecord] %>
+maxerror=<%= @settings[:redshift_maxerror] %>
+delimiter=<%= @settings[:redshift_delimiter] %>

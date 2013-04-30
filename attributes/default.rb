@@ -1,0 +1,1 @@
+include_attribute "redshift-tracking-copy-from-s3::install"

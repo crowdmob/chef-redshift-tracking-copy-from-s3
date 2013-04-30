@@ -1,0 +1,4 @@
+check process redshift-tracking-copy-from-s3 with pidfile <%= @pid_file %>
+  start program = "/usr/local/redshift-tracking-copy-from-s3-daemon start"
+  stop program  = "/usr/local/redshift-tracking-copy-from-s3-daemon stop"
+

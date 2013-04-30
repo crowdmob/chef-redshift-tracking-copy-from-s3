@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case $1 in
+  start)
+     echo $$ > <%= @pid_file %>;
+     /usr/local/redshift-tracking-copy-from-s3 -c <%= @config_file %> 1><%= @output_file %>
+     ;;
+   stop)  
+     /usr/bin/pkill -2 -F <%= @pid_file %> ;;
+   *)  
+     echo "usage: redshift-tracking-copy-from-s3-daemon {start|stop}" ;;
+esac
+exit 0
