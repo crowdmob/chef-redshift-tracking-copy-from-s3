@@ -30,6 +30,7 @@ This cookbook relies on a databag, which you should set in Amazon OpsWorks as yo
     "s3_buckets_array": ["my-bucket-1", "my-bucket-2", ...],
     "s3_prefixes_array": ["bucket-1-events-prefix/", "bucket-2-events-prefix/", ...],
     "redshift_tables_array": ["table1name", "table2name", ...],
+    "redshift_schema_json_url": "http://my-server/my-schema.json",
     "env": {
       "AWS_ACCESS_KEY_ID": "YOUR_AWS_ACCESS_KEY_CREDENTIALS",
       "AWS_SECRET_ACCESS_KEY": "YOUR_AWS_SECRET_KEY_CREDENTIALS",
